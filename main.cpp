@@ -11,15 +11,12 @@ int main(int argc, char* argv[]) {
     std::string filePath = argv[1];
     BMPReader bmp;
 
-    // Открываем BMP файл
     if (!bmp.openBMP(filePath)) {
         return 1;
     }
 
-    // Отображаем BMP файл
     bmp.displayBMP();
 
-    // Освобождаем ресурсы
     bmp.closeBMP();
 
     return 0;
